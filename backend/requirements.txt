@@ -1,0 +1,5 @@
+flask
+pytest
+requests
+flask-cors
+# TODO: Add Google ADK and A2A SDKs when available 

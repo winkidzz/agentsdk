@@ -1,0 +1,63 @@
+<context>
+# Overview  
+This project is an AI-powered agent designed to summarize clinical notes. The agent leverages Google ADK (Agent Development Kit) and A2A (Agent-to-Agent) protocols, and integrates with Gemma running locally for advanced language processing. The agent is accessible via a React web application, allowing clinicians to input free-text notes and receive concise, accurate summaries. This solution streamlines clinical documentation, reduces cognitive load, and improves information retrieval for healthcare professionals.
+
+# Core Features  
+- **Clinical Note Summarization**: Accepts raw clinical notes and returns a concise summary using Gemma's LLM capabilities.
+- **React Web Application**: User-friendly frontend for clinicians to submit notes and view summaries.
+- **ADK & A2A Integration**: Agent is built using Google ADK and communicates via A2A for modularity and extensibility.
+- **Local Gemma Integration**: Utilizes a locally running Gemma instance for privacy and performance.
+- **API Layer**: Secure API endpoints for frontend-backend communication.
+- **Audit Logging**: Tracks summarization requests and responses for compliance.
+
+# User Experience  
+- **User Personas**: Clinicians, medical scribes, and healthcare IT staff.
+- **Key User Flows**: 
+  1. Clinician logs in to the web app.
+  2. Pastes or uploads clinical notes.
+  3. Submits for summarization.
+  4. Receives and reviews the summary.
+  5. Optionally downloads or copies the summary.
+- **UI/UX Considerations**: Simple, accessible interface; clear feedback on processing status; strong privacy messaging.
+</context>
+<PRD>
+# Technical Architecture  
+- **Frontend**: React web application (JavaScript/TypeScript)
+- **Backend**: Java or Python service using Google ADK and A2A
+- **Gemma Integration**: Local Gemma LLM instance, accessed via API or direct SDK
+- **API**: RESTful endpoints for note submission and summary retrieval
+- **Security**: Local-only access, authentication for web app, audit logging
+- **Deployment**: Dockerized services for easy local setup
+
+# Development Roadmap  
+- **MVP Requirements**:
+  - Set up React frontend for note input and summary display
+  - Implement backend agent using ADK and A2A
+  - Integrate with local Gemma instance
+  - Build REST API for frontend-backend communication
+  - Add basic authentication and audit logging
+- **Future Enhancements**:
+  - Support for batch summarization
+  - Role-based access control
+  - Advanced analytics and reporting
+  - Integration with EHR systems
+
+# Logical Dependency Chain
+- Backend agent foundation (ADK/A2A)
+- Gemma integration
+- REST API
+- Frontend React app
+- Authentication & audit logging
+- Enhancements (batch, RBAC, analytics)
+
+# Risks and Mitigations  
+- **Gemma integration complexity**: Mitigate by starting with simple API calls, then optimizing.
+- **Data privacy**: Ensure all processing is local, use strong authentication.
+- **Clinical accuracy**: Validate summaries with real clinical data and user feedback.
+- **User adoption**: Engage clinicians early for feedback and usability testing.
+
+# Appendix  
+- Gemma documentation
+- Google ADK and A2A docs
+- Example clinical notes and summaries
+</PRD> 
